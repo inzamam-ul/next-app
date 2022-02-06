@@ -22,6 +22,7 @@ const useStyles = makeStyles(styles);
 export default function Header(props) {
   const classes = useStyles();
   const [mobileOpen, setMobileOpen] = React.useState(false);
+
   React.useEffect(() => {
     if (props.changeColorOnScroll) {
       window.addEventListener("scroll", headerColorChange);
@@ -62,8 +63,9 @@ export default function Header(props) {
     [classes.fixed]: fixed,
   });
   const brandComponent = (
-    <Link href="/components" as="/components">
-      <Button className={classes.title}>{brand}</Button>
+    <Link href="/">
+      {/* <Button className={classes.title}>{brand}</Button> */}
+      <img style={{ height: 50 }} src="/img/favicon.png"></img>
     </Link>
   );
   return (

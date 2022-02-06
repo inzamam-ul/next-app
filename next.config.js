@@ -11,4 +11,5 @@ module.exports = withPlugins([[withImages]], {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
+  swcMinify: true, // minifying JavaScript up to 7x faster
 });

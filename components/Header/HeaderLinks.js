@@ -27,49 +27,73 @@ export default function HeaderLinks(props) {
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
+        <Link href="/about">
+          <Button
+            color="transparent"
+            target="_blank"
+            className={classes.navLink}
+          >
+            Home
+          </Button>
+        </Link>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Link href="/about">
+          <Button
+            color="transparent"
+            target="_blank"
+            className={classes.navLink}
+          >
+            About
+          </Button>
+        </Link>
+      </ListItem>
+
+      <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
           navDropdown
-          buttonText="Components"
+          buttonText="services"
           buttonProps={{
             className: classes.navLink,
             color: "transparent",
           }}
-          buttonIcon={Apps}
           dropdownList={[
-            <Link href="/components">
-              <a className={classes.dropdownLink}>All components</a>
+            <Link href="#">
+              <a className={classes.dropdownLink}>service 1</a>
             </Link>,
-            <a
-              href="https://creativetimofficial.github.io/nextjs-material-kit/#/documentation?ref=njsmk-navbar"
-              target="_blank"
-              className={classes.dropdownLink}
-            >
-              Documentation
-            </a>,
+            <Link href="#">
+              <a className={classes.dropdownLink}>service 2</a>
+            </Link>,
+            <Link href="#">
+              <a className={classes.dropdownLink}>service 3</a>
+            </Link>,
           ]}
         />
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button
-          href="https://www.creative-tim.com/product/nextjs-material-kit-pro?ref=njsmk-navbar"
-          color="transparent"
-          target="_blank"
-          className={classes.navLink}
-        >
-          <Icon className={classes.icons}>unarchive</Icon> Upgrade to PRO
-        </Button>
+        <Link href="/about">
+          <Button
+            color="transparent"
+            target="_blank"
+            className={classes.navLink}
+          >
+            Gallery
+          </Button>
+        </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button
-          href="https://www.creative-tim.com/product/nextjs-material-kit?ref=njsmk-navbar"
-          color="transparent"
-          target="_blank"
-          className={classes.navLink}
-        >
-          <CloudDownload className={classes.icons} /> Download
-        </Button>
+        <Link href="/about">
+          <Button
+            color="transparent"
+            target="_blank"
+            className={classes.navLink}
+          >
+            Contact us
+          </Button>
+        </Link>
       </ListItem>
+
       <ListItem className={classes.listItem}>
         {/*<Tooltip title="Delete">
           <IconButton aria-label="Delete">
